@@ -1,4 +1,4 @@
-#include "data_products/DataProduct.h"
+#include "data_products/common/DataProduct.h"
 
 using namespace dataProducts;
 
