@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(unpacker_data_product_core VERSION 1.0 LANGUAGES CXX)
+project(unpacker_data_products_core VERSION 1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
