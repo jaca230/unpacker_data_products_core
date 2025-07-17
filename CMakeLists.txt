@@ -17,8 +17,28 @@ endif()
 include(GNUInstallDirs)
 include(CMakePackageConfigHelpers)
 
-# ------------------ CPM Setup ------------------
+# --------------------- CPM Setup ---------------------
 include(${CMAKE_CURRENT_SOURCE_DIR}/cmake/CPM.cmake)
+
+# Use externally-defined versions if set, else fallback
+set(CPM_NLOHMANN_JSON_VERSION "3.11.3" CACHE STRING "nlohmann_json version")
+
+# --------------------- nlohmann_json ---------------------
+CPMAddPackage(
+  NAME nlohmann_json
+  GITHUB_REPOSITORY nlohmann/json
+  VERSION ${CPM_NLOHMANN_JSON_VERSION}
+  DOWNLOAD_ONLY YES
+)
+
+if(nlohmann_json_ADDED)
+  add_library(nlohmann_json_header_only INTERFACE)
+  target_include_directories(nlohmann_json_header_only INTERFACE
+    $<BUILD_INTERFACE:${nlohmann_json_SOURCE_DIR}/include>
+    $<INSTALL_INTERFACE:include>
+  )
+  add_library(nlohmann_json::nlohmann_json ALIAS nlohmann_json_header_only)
+endif()
 
 # Required system packages
 find_package(ROOT REQUIRED COMPONENTS Core RIO)
