@@ -1,5 +1,5 @@
 // JsonProduct.cpp
-#include "data_products/common/JsonProduct.h"
+#include "analysis_pipeline/unpacker_core/data_products/JsonProduct.h"
 #include <iostream>
 
 ClassImp(dataProducts::JsonProduct)

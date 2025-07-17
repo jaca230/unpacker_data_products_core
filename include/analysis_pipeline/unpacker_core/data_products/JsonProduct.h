@@ -2,7 +2,7 @@
 #ifndef DATA_PRODUCTS_JSONPRODUCT_H
 #define DATA_PRODUCTS_JSONPRODUCT_H
 
-#include "DataProduct.h"
+#include "analysis_pipeline/unpacker_core/data_products/DataProduct.h"
 #include <string>
 #include <nlohmann/json.hpp>
 

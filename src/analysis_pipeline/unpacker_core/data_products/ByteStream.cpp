@@ -1,4 +1,4 @@
-#include "data_products/common/ByteStream.h"
+#include "analysis_pipeline/unpacker_core/data_products/ByteStream.h"
 #include <iostream>
 #include <iomanip>
 #include <sstream>

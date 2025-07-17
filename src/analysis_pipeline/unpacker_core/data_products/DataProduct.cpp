@@ -1,4 +1,4 @@
-#include "data_products/common/DataProduct.h"
+#include "analysis_pipeline/unpacker_core/data_products/DataProduct.h"
 
 using namespace dataProducts;
 
