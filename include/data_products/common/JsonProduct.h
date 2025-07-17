@@ -10,8 +10,8 @@ namespace dataProducts {
 
 class JsonProduct : public DataProduct {
 public:
-    JsonProduct() = default;
-    ~JsonProduct() override = default;
+    JsonProduct();
+    ~JsonProduct() override;
 
     // Public POD string storing JSON text
     std::string jsonString;

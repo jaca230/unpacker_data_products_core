@@ -60,6 +60,7 @@ target_include_directories(${PROJECT_NAME}
 target_link_libraries(${PROJECT_NAME}
   PUBLIC
     ROOT::Core ROOT::RIO
+    nlohmann_json_header_only
 )
 
 # Helper function to gather include dirs from targets for ROOT dictionary

@@ -6,6 +6,9 @@ ClassImp(dataProducts::JsonProduct)
 
 namespace dataProducts {
 
+JsonProduct::JsonProduct() = default;
+JsonProduct::~JsonProduct() = default;
+
 nlohmann::json JsonProduct::toJson() const {
     try {
         return nlohmann::json::parse(jsonString);
